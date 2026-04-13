@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adam Muderris</title>
+  <meta name="description" content="Personal site of Adam Muderris." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>A</text></svg>" />
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --fg: #e8e6e3;
+      --muted: #8a8680;
+      --accent: #e4b363;
+      --rule: #26252a;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#fafaf7; --fg:#1a1a1a; --muted:#666; --accent:#a06a1e; --rule:#e5e2dc; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+    main {
+      max-width: 640px;
+      width: 100%;
+      padding: 4rem 1.5rem 6rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 .25rem;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      color: var(--muted);
+      margin: 0 0 2.5rem;
+    }
+    h2 {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted);
+      margin: 2.5rem 0 1rem;
+      font-weight: 600;
+    }
+    p { margin: 0 0 1rem; }
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+    a:hover { border-bottom-color: var(--accent); }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { padding: .6rem 0; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    li:last-child { border-bottom: 1px solid var(--rule); }
+    li .desc { color: var(--muted); font-size: .92rem; }
+    footer { margin-top: 4rem; color: var(--muted); font-size: .85rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Adam Muderris</h1>
+    <p class="tagline">Hi — welcome to my corner of the web.</p>
+
+    <p>Short intro goes here: what you do, what you're working on, what you care about. Keep it to one or two sentences.</p>
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://github.com/adam79689">GitHub</a><span class="desc">@adam79689</span></li>
+      <li><a href="mailto:hello@muderris.de">Email</a><span class="desc">hello@muderris.de</span></li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="#">Project one</a><span class="desc">One-line description.</span></li>
+      <li><a href="#">Project two</a><span class="desc">One-line description.</span></li>
+    </ul>
+
+    <footer>&copy; <span id="y"></span> Adam Muderris</footer>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
